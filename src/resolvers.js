@@ -1,8 +1,8 @@
 import Task from "./models/task"
 export const resolvers = {
     Query: {
-        hello: () => {
-            return 'hola';
+        tasks: async () =>{
+            return await Task.find();
         }
     },
     Mutation: {

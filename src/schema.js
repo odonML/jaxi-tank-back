@@ -3,7 +3,7 @@ import {resolvers} from "./resolvers";
 
 const typeDefs = `
     type Query{
-        hello: String
+        tasks: [Task]
     }
     type Task{
         _id: ID
