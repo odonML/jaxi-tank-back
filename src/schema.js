@@ -3,7 +3,7 @@ import {resolvers} from "./resolvers";
 
 const typeDefs = `
     type Query{
-        hello: String
+        tasks: [Task]
     }
     type Task{
         _id: ID
@@ -12,6 +12,8 @@ const typeDefs = `
     }
     type Mutation{
         createTask(input: TaskInput): Task
+        deleteTask(_id: ID): Task
+        updateTask(_id: ID, input: TaskInput): Task
     }
     input TaskInput{
         title: String!
