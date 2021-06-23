@@ -8,7 +8,7 @@ const port = 3001;
 const app = express();
 connect();
 
-app.get('/', (req, res) => {add
+app.get('/', (req, res) => {
     res.json({
         menssge: 'hola mundo xD'
     })
