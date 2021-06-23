@@ -12,6 +12,8 @@ const typeDefs = `
     }
     type Mutation{
         createTask(input: TaskInput): Task
+        deleteTask(_id: ID): Task
+        updateTask(_id: ID, input: TaskInput): Task
     }
     input TaskInput{
         title: String!
