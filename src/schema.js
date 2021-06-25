@@ -7,34 +7,36 @@ const typeDefs = `
         tasks: [Task]
     }
     type User{
-        _id: ID
+        _id: String
         name: String
-        age: Int
+        cargo: String
         celphone: Float
+        img: String
     }
     type Task{
-        _id: ID
+        _id: String
         title: String
         description: String
     }
     type Mutation{
-        createUser(input: UserInput): User
-        deleteUser(_id: ID): User
-        updateUser(_id: ID, input: UserInput): User
+        createUser(input: UserInput): Boolean
+        deleteUser(_id: String): Boolean
+        updateUser(_id: String, input: UserInput): Boolean
         
-        createTask(input: TaskInput): Task
-        deleteTask(_id: ID): Task
-        updateTask(_id: ID, input: TaskInput): Task
+        createTask(input: TaskInput): Boolean
+        deleteTask(_id: String): Boolean
+        updateTask(_id: String, input: TaskInput): Boolean
 
     }
     input TaskInput{
-        title: String!
+        title: String
         description: String
     }
     input UserInput{
-        name: String!
-        age: Int
+        name: String
+        cargo: String
         celphone: Float
+        img: String
     }
 `;
 export default makeExecutableSchema({

@@ -5,8 +5,9 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    age: Number,
-    celphone: Number
+    cargo: String,
+    celphone: Number,
+    img: String
 })
 
 export default model("User", userSchema);

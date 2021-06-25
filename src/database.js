@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const dblink = "mongodb+srv://jaxi_tank_back:jaxitankdb01@cluster0.y1aaj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const dblink = "mongodb://localhost/jaxi-tank";
 export async function connect(){
     try{
         await mongoose.connect(dblink,{
